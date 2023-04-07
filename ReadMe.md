@@ -29,9 +29,10 @@ but the process should be nearly identical for Mac / Windows users.
   - [4. Installation - King Installer](#4-installation---king-installer)
       - [Other options](#other-options)
   - [5. Installation - Android Auto](#5-installation---android-auto)
-  - [6. Install - Android Auto for phone screens](#6-install---android-auto-for-phone-screens)
-  - [7. Installation - Hail](#7-installation---hail)
-  - [8. Usage](#8-usage)
+  - [6. Installation - Android Auto for phone screens](#6-installation---android-auto-for-phone-screens)
+  - [7. Installation - Android Auto - Xposed Unlocked](#7-installation---android-auto---xposed-unlocked)
+  - [8. Installation - Hail](#8-installation---hail)
+  - [9. Usage](#9-usage)
     - [Phone \<=\> Desktop Head Unit](#phone--desktop-head-unit)
     - [AVD \<=\> Desktop Head Unit](#avd--desktop-head-unit)
     - [AVD without Android Studio](#avd-without-android-studio)
@@ -126,7 +127,7 @@ In this guide we'll install the applications we seek to use through **King Insta
 
 ## 5. Installation - Android Auto
 The default Android Auto stub in the system partition of AVDs prevents the installation of full Android Auto on AVDs.
-To work around this, we'll replace the original AA stub with a patched one, provided by **aa4mg**.
+To work around this, we'll replace the original AA stub with a patched one, provided by **aa4mg** *(Android Auto for MicroG)*.
 
 **AVD:**
 1. Download and install the latest **aa4mg** [release](https://github.com/sn-00-x/aa4mg/releases) *(Through Magisk Manager)* => Reboot
@@ -146,17 +147,24 @@ To work around this, we'll replace the original AA stub with a patched one, prov
 7. Settings => Apps => See all apps => Android Auto => Triple dot icon => Allow restricted settings
 8.  Settings => Notifications => Device & app notifications => Android Auto => Check `Allow notification access` => Allow
 
-## 6. Install - Android Auto for phone screens
+## 6. Installation - Android Auto for phone screens
 The Android Auto app likely won't open directly anymore,   
 we'll use the **Android Auto for phone screens** shortcut launcher app to work around this.
 
-9.  Download and install [Android Auto for phone screens](https://github.com/sn-00-x/aa4mg/raw/master/stubs/Android-Auto-for-phone-screens-v1.1.apk) from the aa4mg [`stubs`](https://github.com/sn-00-x/aa4mg/tree/master/stubs) folder *([Through King Installer](#king-installer-installation))*
-10. Download and install [LSPosed (Zygisk) + Shamiko](https://lsposed.org/) *(Through Magisk Manager)* => Reboot
-11. Download and install [Android-Auto-Xposed-Unlocked](https://github.com/Rikj000/Android-Auto-Xposed-Unlocked/releases) *([Through King Installer](#king-installer-installation))*
-12. Notifications => LSPosed => Create shortcut => Add to homescreen
-13. LSPosed => Modules => Check `Enable module` + Check `Android Auto` => Reboot
+**AVD:**
+Download and install [Android Auto for phone screens](https://github.com/sn-00-x/aa4mg/raw/master/stubs/Android-Auto-for-phone-screens-v1.1.apk) from the aa4mg [`stubs`](https://github.com/sn-00-x/aa4mg/tree/master/stubs) folder *([Through King Installer](#king-installer-installation))*
 
-## 7. Installation - Hail
+## 7. Installation - Android Auto - Xposed Unlocked
+Some apps have additional restrictions applied to them.   
+To make these work correctly / reliably we'll need some additional Xposed hooks.
+
+**AVD:**
+1. Download and install [LSPosed (Zygisk) + Shamiko](https://lsposed.org/) *(Through Magisk Manager)* => Reboot
+2.  Download and install [Android-Auto-Xposed-Unlocked](https://github.com/Rikj000/Android-Auto-Xposed-Unlocked/releases) *([Through King Installer](#king-installer-installation))*
+3.  Notifications => LSPosed => Create shortcut => Add to homescreen
+4.  LSPosed => Modules => Check `Enable module` + Check `Android Auto` => Reboot
+
+## 8. Installation - Hail
 Android Auto will launch the last used navigation app by default,   
 which can be annoying if you seek to develop / test things out.
 
@@ -171,7 +179,7 @@ the Android Auto Head Unit will always open straight in it's app launcher.
     - Apps => Filter icon => Check `System` => Check `Maps`
     - Home => Triple dot icon => Freeze current
 
-## 8. Usage
+## 9. Usage
 
 ### Phone <=> Desktop Head Unit
 
