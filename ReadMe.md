@@ -27,6 +27,7 @@ but the process should be nearly identical for Mac / Windows users.
   - [2. Installation - AVD (Android Virtual Device)](#2-installation---avd-android-virtual-device)
   - [3. Root AVD](#3-root-avd)
   - [4. Installation - King Installer](#4-installation---king-installer)
+      - [Verify app installation](#verify-app-installation)
       - [Other options](#other-options)
   - [5. Installation - Android Auto](#5-installation---android-auto)
   - [6. Installation - Android Auto for phone screens](#6-installation---android-auto-for-phone-screens)
@@ -115,6 +116,16 @@ In this guide we'll install the applications we seek to use through **King Insta
 2. Settings => Apps
     - Special app access => All files access => KingInstaller => Check `Allow access to manage all files`
     - See all apps => KingInstaller =>  Install unknown apps => Check `Allow from this source`
+
+#### Verify app installation
+To verify if the process of installing an app "as Google Play Store" went correctly, check as following:
+
+**AVD:**
+- Settings => Apps => See all apps => Name of installed App => Store *(at the bottom)*
+- There you should see either of following, `App installed from ...` messages:
+    - `license checker` - On AVDs without Google Play
+    - `FakeStore` - On AVDs with MicroG *(Google Play Store stub)*
+    - `Google Play Store` - On AVDs with Google Play Store enabled
 
 #### Other options
 - [Aurora Store](https://gitlab.com/AuroraOSS/AuroraStore) *(With `Root installer` as the installation method enabled!)*
