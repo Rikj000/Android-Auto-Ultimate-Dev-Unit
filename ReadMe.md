@@ -152,7 +152,8 @@ The Android Auto app likely won't open directly anymore,
 we'll use the **Android Auto for phone screens** shortcut launcher app to work around this.
 
 **AVD:**
-Download and install [Android Auto for phone screens](https://github.com/sn-00-x/aa4mg/raw/master/stubs/Android-Auto-for-phone-screens-v1.1.apk) from the aa4mg [`stubs`](https://github.com/sn-00-x/aa4mg/tree/master/stubs) folder *([Through King Installer](#king-installer-installation))*
+1. Download and install [Android Auto for phone screens](https://github.com/sn-00-x/aa4mg/raw/master/stubs/Android-Auto-for-phone-screens-v1.1.apk) from the aa4mg [`stubs`](https://github.com/sn-00-x/aa4mg/tree/master/stubs) folder *([Through King Installer](#king-installer-installation))*
+2. Settings => Apps => See all apps => Android Auto for phonescreens => Mobile data & Wi-Fi => UnCheck all
 
 ## 7. Installation - Android Auto - Xposed Unlocked
 Some apps have additional restrictions applied to them.   
